@@ -1,0 +1,5 @@
+ergo projector okay
+ergo projector power
+ergo projector left
+ergo projector right
+ergo exit
