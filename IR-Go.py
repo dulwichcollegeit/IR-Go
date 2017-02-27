@@ -9,6 +9,13 @@ from sphinxbase import *
 import pyaudio
 import time
 from subprocess import call
+import RPi.GPIO as GPIO
+
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO.setup(20, GPIO.OUT)
+GPIO.setup(21, GPIO.OUT)
 
 hmm = 'cmusphinx-5prealpha-en-us-ptm-2.0/'
 dic = 'dictionary.dic'
@@ -35,7 +42,7 @@ while not exit_program:
 
     print "Speak"
     # Turn on Speak LED
-
+    GPIO.output(20, GPIO.HIGH)
     # Start an 'utterance'
     
     utteranceStarted = False
@@ -57,6 +64,7 @@ while not exit_program:
             if inSpeech and not utteranceStarted:
                 utteranceStarted = True
                 # Turn off Speak LED
+                GPIO.output(20, GPIO.LOW)
             # The following checks for the transition from speech to silence.
             if not inSpeech and utteranceStarted:
                 
