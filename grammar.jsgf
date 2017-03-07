@@ -1,4 +1,4 @@
 #JSGF v1.0;
 grammar command;
-public <command> = ergo ;
+public <command> = ergo;
 

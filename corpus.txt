@@ -2,4 +2,16 @@ ergo projector okay
 ergo projector power
 ergo projector left
 ergo projector right
+ergo projector down
+ergo projector up
+ergo projector zoom
+ergo projector back
+ergo projector play
+ergo projector fast forward
+ergo projector rewind
+ergo projector mute
+ergo projector volume up
+ergo projector volume down
+ergo projector brightness up
+ergo projector brightness down
 ergo exit
